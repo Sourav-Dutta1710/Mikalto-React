@@ -103,7 +103,7 @@ function Hero() {
           <span class="p-3"><a class="nav-link" href="#">View Homestay &rarr;</a></span>
         </div>
       </div>
-      <form class="hero-form bg-white text-black py-5 px-12 py-12 sm:m-12 xxl:w-2/5">
+      <form class="hero-form bg-white text-black px-12 py-12 sm:m-12 xxl:w-2/5">
         <p class="pb-8"><span class="text-3xl">Search Room<br /></span>Get the latest on our COVID-19 response</p>
         <div class="flex justify-between">
           <span class="pe-5 common-text"><i class="fa-regular fa-calendar pe-2"></i>Checkin*</span>
