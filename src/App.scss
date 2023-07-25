@@ -1,0 +1,81 @@
+$blue: #0e245d !important;
+$pink: #fffaf6 !important;
+
+@mixin item($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+@mixin wide($width) {width:$width}
+
+@mixin high($height) {max-height: $height;}
+
+.common-images {@include high(80vh);}
+.common-colour {background-color:$blue;}
+.common-text{color:$blue;}
+
+.different-images {@include high(33vh);}
+.different-colour {background-color: $pink;}
+
+.side-images {@include high(50vh);}
+
+button:hover{
+    background-color: $blue;
+    transform: scale(1.1,1.1);
+}
+
+@media (min-width: 425px) {
+
+    h1 { font-size: 4rem !important; }
+}
+
+@media (min-width: 1440px) {
+
+    %container { position: relative; }
+
+    .hidden-item{display: block !important;}
+
+    .hero {
+        @extend %container;
+        color: white;
+    }
+    
+    .hero-heading {
+        @include item(10rem, 55rem);
+        @include wide(30rem);
+        z-index: 2;
+    }
+
+    .hero-form {
+        @include item(3rem,8rem);
+        z-index: 1;
+    }
+
+    .comfort {@extend %container;}
+    .comfort-left-image {@include item(5rem, 25rem);}
+    .comfort-right-image {@include item(8rem, 7rem);}
+    .comfort-middle-image {@include item(16rem, 20rem);}
+    .comfort-para{@include wide(30rem);}
+    
+    .rooms {@extend %container;}
+    .rooms-arrow-left {@include item(18rem, 50rem);}
+    .rooms-arrow-right {@include item(18rem, 2rem);}
+
+    .hello {@extend %container;}
+    .hello-item {
+        @include item(8rem, 10rem);
+        @include wide(30rem);
+    }
+
+    .adress-item{@include wide(35rem);}
+
+    .subscribe {
+        @extend %container;
+        color:white;
+    }
+
+    .subscribe-button {@include item(7.5rem, 23.5rem);}
+
+    .footer-para{@include wide(20rem);}
+}
