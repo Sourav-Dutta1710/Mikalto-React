@@ -76,7 +76,6 @@ function NavList(){
 }
 
 function Navbar() {
-  let flag=0;
   return (
     <nav class="flex flex-col md:flex-row justify-between">
       <p class="commonText text-center xl:ms-12">
