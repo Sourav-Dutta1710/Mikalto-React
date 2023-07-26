@@ -1,3 +1,4 @@
+import React,{useState} from 'react';
 import './App.css';
 import './App.scss';
 import skiNight from "./images/hero-section/ski-night.jpg";
@@ -48,9 +49,9 @@ function roomChange() {
   }
 }
 
-function NavList(){
+function NavList(props){
   return(
-    <div id="navList">
+    <div id="navList" class={props.class}>
         <ul class="navbar-nav mb-2 mb-lg-0 py-4 flex flex-col md:flex-row items-center">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -76,13 +77,16 @@ function NavList(){
 }
 
 function Navbar() {
+  const [show, setShow] = useState("");
   return (
     <nav class="flex flex-col md:flex-row justify-between">
       <p class="commonText text-center xl:ms-12">
         <span class="text-3xl">Mikalto</span><br />
         Hotels & Resorts<br />
       </p>
-      {<NavList/>}
+      <button class="md:hidden mt-3" onClick={()=>{if(show==="")setShow("hidden");else{setShow("")}}}>
+      <i class="fa-solid fa-bars fa-2xl"></i></button>
+      {<NavList class={show}/>}
       <div class="d-flex me-12 mt-4">
         <a class="nav-link" href="#"><i class="fa-solid fa-bag-shopping p-2"></i></a>
       </div>

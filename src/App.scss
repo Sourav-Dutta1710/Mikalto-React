@@ -20,14 +20,14 @@ $pink: #fffaf6 !important;
 
 .side-images {@include high(50vh);}
 
-button:hover{
-    background-color: $blue;
-    transform: scale(1.1,1.1);
-}
-
-@media (min-width: 425px) {
+@media (min-width: 426px) {
 
     h1 { font-size: 4rem !important; }
+
+    button:hover{
+        background-color: $blue;
+        transform: scale(1.1,1.1);
+    }
 }
 
 @media (min-width: 1440px) {
